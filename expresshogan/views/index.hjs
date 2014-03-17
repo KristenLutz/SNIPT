@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular.min.js"></script>
+  </head>
+  <body>
+    <h1>{{ total }}</h1>
+    <p>Welcome to {{ title }}</p>
+    <h1> {{ resultString }}</h1>
+    <h2> link - {{ result }} </h2>
+      <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Protein A</th>
+        <th>Interaction Type</th>
+        <th>Protein B</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ ppi_id }}</td>
+        <td>{{ protein_A_id }}</td>
+        <td>{{ interaction }}</td>
+        <td>{{ protein_B_id }}</td>
+        <td>{{ link }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<!-- SCRIPTS -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js1/bootstrap.min.js"></script>
+    <script src="js1/application.js"></script>
+    <script src="js1/bootswatch.js"></script>
+  </body>
+</html>

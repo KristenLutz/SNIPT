@@ -1,0 +1,45 @@
+# this subroutine converts dates from the
+# 'dd DD MMMM YYY nn:nn:nn TMZ' date format used in 'CELL'
+# and 'Stem Cells and Development' journals into 'YYYY-MM-DD'
+
+# ex Tue 18 Feb 2014 22:01:49 GMT -> 2014-02-18
+
+sub YYYYMMDD {
+
+    my $wrong_date_format = $_[0];
+    $wrong_date_format =~ /(.+?) (..) (.+?) (....)(.+?)/;
+
+    my $month = $3;
+    my $year = $4;
+    my $date = $2;
+    
+    if ($month eq "Jan" or $month eq "January") {
+        $month = "01";
+    } elsif ($month eq "Feb" or $month eq "February") {
+        $month = "02";
+    } elsif ($month eq "Mar" or $month eq "March") {
+        $month = "03";
+    } elsif ($month eq "Apr" or $month eq "April") {
+        $month = "04";
+    } elsif ($month eq "May") {
+        $month = "05";
+    } elsif ($month eq "Jun" or $month eq "June") {
+        $month = "06";
+    } elsif ($month eq "Jul" or $month eq "July") {
+        $month = "07";
+    } elsif ($month eq "Aug" or $month eq "August") {
+        $month = "08";
+    } elsif ($month eq "Sep" or $month eq "Sept" or $month eq "September") {
+        $month = "09";
+    } elsif ($month eq "Oct" or $month eq "October") {
+        $month = "10";
+    } elsif ($month eq "Nov" or $month eq "November") {
+        $month = "11";
+    } elsif ($month eq "Dec" or $month eq "December") {
+        $month = "12";
+    }
+
+    return my $correct_date_format = "$year-$month-$date";
+}
+
+1;

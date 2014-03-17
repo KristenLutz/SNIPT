@@ -1,0 +1,8 @@
+#!usr/bin/perl
+use warnings;
+use strict;
+
+sub pwd{
+    return "brLY5867";
+}
+1;
